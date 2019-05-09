@@ -36,7 +36,7 @@ const CategoriesList = (props) => {
             <tbody>
                 
               {/* TODO: implement the body (category name rows) */}
-             {categories.map(createCategoryRow)};
+             {categories.map(createCategoryRow)}
             </tbody>
           </Table>
         </Col>

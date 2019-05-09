@@ -21,7 +21,7 @@ class CheesesView extends Component {
     const cheeseRes = await request.get("/cheeses") // TODO: implement a request to the cheeses collection
     const cheeses = cheeseRes.data;
 
-    const categoriesRes = await request.get("/cheese/category") // TODO: implement a request to the categories collection
+    const categoriesRes = await request.get("/categories") // TODO: implement a request to the categories collection
     const categories = categoriesRes.data;
 
     this.setState({ cheeses, categories });
@@ -36,7 +36,7 @@ class CheesesView extends Component {
     });
 
   deleteCheese = async cheeseID => {
-    const res =  await request.delete("/cheeses/cheeseID")// TODO: implement a request to the correct endpoint to delete the cheese (be mindful of the HTTP method you need)
+    const res =  await request.delete("/cheeses/" + cheeseID)// TODO: implement a request to the correct endpoint to delete the cheese (be mindful of the HTTP method you need)
 
     // if the DELETE request was unsuccessful exit early
     if (res.status !== 200) { // <-- normally success DELETE is status 204
