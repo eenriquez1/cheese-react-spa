@@ -7,7 +7,6 @@ import Button from "react-bootstrap/Button";
 
 import request from "../../utilities/api-request";
 import { cheeseType, menuType } from "../../utilities/prop-types";
-import CheesesList from "../cheese/CheesesList";
 
 // if your face melted trying to understand this look below!
 const filterAvailableCheeses = (currentCheeses, allCheeses) =>
